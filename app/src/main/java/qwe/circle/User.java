@@ -64,24 +64,24 @@ public class User extends AppCompatActivity  {
         newTest.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //**************ВВОД ДАННЫХ*******************************
-                EditText surnameActivity = (EditText) findViewById(R.id.editText7);
-                EditText nameActivity = (EditText) findViewById(R.id.editText8);
-                EditText patronymicActivity = (EditText) findViewById(R.id.editText9);
-                EditText birthdayActivity = (EditText) findViewById(R.id.editText10);
-                //   SharedPreferences sPref;
-
-                surname = new String(surnameActivity.getText().toString());
-                name = new String(nameActivity.getText().toString());
-                patronymic = new String(patronymicActivity.getText().toString());
-                age = Integer.parseInt(new String (birthdayActivity.getText().toString()));
-
 
                 Intent intent = new Intent(User.this, UserTest.class);
                 startActivity(intent);
 
             }
         });
+
+        //**************ВВОД ДАННЫХ*******************************
+        EditText surnameActivity = (EditText) findViewById(R.id.editText7);
+        EditText nameActivity = (EditText) findViewById(R.id.editText8);
+        EditText patronymicActivity = (EditText) findViewById(R.id.editText9);
+        EditText birthdayActivity = (EditText) findViewById(R.id.editText10);
+        //   SharedPreferences sPref;
+
+        surname = new String(surnameActivity.getText().toString());
+        name = new String(nameActivity.getText().toString());
+        patronymic = new String(patronymicActivity.getText().toString());
+        age = Integer.parseInt(new String (birthdayActivity.getText().toString()));
 
         //НАЙТИ как сохранать значение из спинера
         // устанавливаем обработчик нажатия

@@ -14,19 +14,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button newTest = (Button) findViewById(R.id.button);
-        Button settings = (Button) findViewById(R.id.button2);
+        Button settings = (Button) findViewById(qwe.circle.R.id.button2);
         Button statistics = (Button) findViewById(R.id.button3);
 
         newTest.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent startActivities = new Intent(MainActivity.this, User.class/*создать активити для формы регистрации*/);
+                Intent intent = new Intent(MainActivity.this, User.class);
+                startActivity(intent);
             }
         });
         settings.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent startActivities = new Intent(MainActivity.this, Settings.class);
+                Intent intent = new Intent(MainActivity.this, Settings.class);
+                startActivity(intent);
             }
         });
 

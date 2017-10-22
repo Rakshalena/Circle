@@ -10,9 +10,9 @@ public class Click {
     public int y;
     public long clickTime;
 
-  /*  public double distance(int x, int y){
-
-    };*/
+    public double distance(int x, int y){
+        return 1;
+    }
 
 
 }
